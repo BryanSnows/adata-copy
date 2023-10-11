@@ -1,0 +1,29 @@
+#!/bin/bash
+# Author Luiz Schmitt <lzschmitt@gmail.com>
+
+BASE_DIR=$(dirname "$0")/..
+
+PROJECT_NAME=$(echo $CI_PROJECT_NAMESPACE | cut -d'/' -f2)
+
+if [ $CI_BUILD_REF_NAME = "main" ]; then
+    domain="$PROJECT_NAME"
+else
+    domain="$PROJECT_NAME-$CI_BUILD_REF_NAME"
+fi
+
+cat <<EOF > $BASE_DIR/.env
+REACT_APP_API_BASE_URL=http://192.168.0.44:3000
+REACT_APP_SOCKET_BASE_URL=http://192.168.0.44
+
+EOF
+
+cat <<EOF > $BASE_DIR/version.txt
+commit: $CI_COMMIT_SHORT_SHA at $CI_COMMIT_TIMESTAMP on $CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME@$CI_BUILD_REF_NAME
+
+builded by: $GITLAB_USER_LOGIN <$GITLAB_USER_EMAIL>
+
+environments:
+$(cat $BASE_DIR/.env)
+EOF
+
+export domain=$domain

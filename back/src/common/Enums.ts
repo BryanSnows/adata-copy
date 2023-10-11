@@ -1,0 +1,130 @@
+export enum VerifyCredentials {
+    verify_enrollment = 'enrollment',
+    verify_password = 'password'
+}
+
+export enum SqlType{
+    SQL = 'SQL',
+    NORMAL = 'NORMAL',
+    BR = 'BR'
+}
+
+export enum SortingType {
+    ID = 'ID',
+    NAME = 'NAME',
+    DATE = 'DATE',
+    NUMBER = 'NUMBER',
+    FIRST_DATE = 'FIRST_DATE',
+    LAST_DATE = 'LAST_DATE'
+}
+
+export enum ShiftType {
+    PRIMEIRO_TURNO = '1° Turno',
+    SEGUNDO_TURNO = '2° Turno'
+}
+
+export enum ValidType {
+    IS_BOOLEAN = 'IS_BOOLEAN',
+    IS_BIT = 'IS_BIT',
+    NO_SPACE = 'NO_SPACE',
+    NO_MANY_SPACE = 'NO_MANY_SPACE',
+    IS_STRING = 'IS_STRING',
+    IS_NUMBER = 'IS_NUMBER',
+    IS_NUMBER_FLOAT = 'IS_NUMBER_FLOAT',
+    NO_SPECIAL_CHARACTER = 'NO_SPECIAL_CHARACTER',
+    OFFICE_NO_SPECIAL_CHARACTER = 'OFFICE_NO_SPECIAL_CHARACTER',
+    SHIFT_NO_SPECIAL_CHARACTER = 'SHIFT_NO_SPECIAL_CHARACTER',
+    IS_EMAIL = 'IS_EMAIL',
+    DATE = 'DATE',
+    DATE_BR = 'DATE_BR',
+    IS_CNPJ = 'IS_CNPJ',
+    SPECIAL_CHARACTER =  'SPECIAL_CHARACTER',
+    MINIMUM_ONE_NUMBER = 'MINIMUM_ONE_NUMBER',
+    MINIMUM_ONE_NUMBER_STRING_SPECIAL_CHARACTER = 'MINIMUM_ONE_NUMBER_STRING_SPECIAL_CHARACTER',
+    MINIMUM_ONE_STRING = 'MINIMUM_ONE_STRING',
+    DIFERENT_OF_ZERO = 'DIFERENT_OF_ZERO',
+    SLOTS_BLISTER = 'SLOTS_BLISTERS',
+    BLANK_SPACES_BEGINNING = 'BLANK_SPACES_BEGINNING',
+    MST_DIFERENT_OF_ZERO= 'MST_DIFERENT_OF_ZERO',
+    MST_IS_NUMBER = 'MST_IS_NUMBER',
+    CABINET_DIFERENT_OF_ZERO= 'CABINET_DIFERENT_OF_ZERO',
+    CABINET_IS_NUMBER = 'CABINET_IS_NUMBER',
+
+
+}
+
+export enum ObjectSize{
+    INTEGER = 2147483646,
+    DEFAULT_DAYS = 35
+}
+
+export enum DateOperation{
+    ADD = 'ADD',
+    REMOVE = 'REMOVE'
+}
+
+export enum TypeEmail{
+    CREATE  = 'CREATE',
+    RESET = 'RESET'
+}
+
+export enum CodeError{
+    IS_REGISTERED = 1000, 
+    NOT_FOUND = 1001, 
+    INVALID_NUMBER = 1002,
+    NOT_EMPTY = 1003,
+    IS_DESABLE = 1004, 
+    IS_BLOCKED = 1005, 
+    CANNOT_BE_CHANGED = 1006,
+    INCORRECT_FIRST_ACCESS_PASSWORD = 1101,
+    NEW_PASSWORD_CANNOT_MATCH = 1102,
+    PASSWORD_CONFIRMATION_NOT_MATCH = 1103,
+    IS_NUMBER = 1201, 
+    IS_STRING = 1202,
+    NO_SPACE = 1203,
+    NO_SPECIAL_CHARACTER = 1204,
+    IS_EMAIL = 1205,
+    SPECIAL_CHARACTER = 1206,
+    MIN_ONE_NUMBER = 1207,
+    MIN_CHARACTER = 1208,
+    MAX_CHARACTER = 1209,
+    DIFERENT_OF_ZERO = 1210,
+    IS_NOT_BOOLEAN = 1211,
+    IS_NOT_BIT = 1212,
+    BLANK_SPACES_BEGINNING = 2424,
+    INVALID_DATA_RANGER = 3000,
+    IN_PROCESS = 4000,
+    REENVIADO = 5000,
+    NOT_TEST = 6000,
+    IS_REPROVED = 7000,
+    NOT_FOUND_CABINET_ON_WORK_ORDER = 8000,
+    NOT_FOUND_SERIAL_ON_CACHE = 8001,
+    NOT_ENDED_MST_TEST = 8002,
+}
+
+
+export enum CodeObject {
+  NAME = 'Name',
+  ENROLLMENT = 'Enrollment',
+  PASSWORD = 'Password',
+  USER = 'User',
+  SHIFT = 'Shift',
+  OFFICE = 'Office',
+  EMAIL = 'Email',
+  CABINET = 'Cabinet',
+  MST = 'MST',
+  MST_SIDE = 'Mst Side',
+  CABINET_SIDE = 'Cabinet Side',
+  PROFILE = 'Profile',
+  ID = 'Id',
+  BLISTER = 'Blister',
+  IMAGE = 'Image',
+  VALUE = 'Value',
+  TRAVEL = "Travel",
+  SN_LIST = "Sn List",
+  SLOT_DEFECT = "slot Defect",
+  POSITION = "Position",
+  SERIAL = "Serial"
+}
+
+
